@@ -30,7 +30,7 @@ export default function Table(props: TableProps) {
                         ${idx % 2 === 0 ? 'bg-gray-400' : 'bg-gray-300'}
                     `}
                 >
-                    <td className={`text-left p-4 font-bold`}>{client.id}</td>
+                    <td className={`text-left p-4 font-bold overflow-hidden max-w-[25px]`}>{client.id}</td>
                     <td className={`text-left p-4 font-bold`}>{client.name}</td>
                     <td className={`text-left p-4 font-bold`}>{client.age}</td>
                     {showActions ? renderActions(client) : false}
@@ -65,7 +65,7 @@ export default function Table(props: TableProps) {
     }
 
     return (
-        <table className={`w-full rounded-xl overflow-hidden`}>
+        <table className={`w-full rounded-xl overflow-hidden max-sm:min-w-[95%]`}>
             <thead className={`
                 bg-gray-700 text-white
             `}>
